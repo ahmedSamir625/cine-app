@@ -1,6 +1,6 @@
 const path = require("path");
-// const mode =
-//   process.env.NODE_ENV == "production" ? "production" : "development";
+
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const MiniCssExtractLoader = require("mini-css-extract-plugin");
 
@@ -13,7 +13,13 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
   },
 
-  plugins: [new MiniCssExtractLoader()],
+  plugins: [
+    new MiniCssExtractLoader(),
+    new HtmlWebpackPlugin({
+      template: "src/index.html",
+      inject: "head" || false,
+    }),
+  ],
 
   module: {
     rules: [

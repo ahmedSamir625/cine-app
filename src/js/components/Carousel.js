@@ -1,3 +1,7 @@
+import "flickity/dist/flickity.min.css";
+import Flickity from "flickity";
+
+
 export const Carousel = (data, carouselId, dataFlickity, itemComponent) => {
   const createCarouselItems = () => {
     let items = "";
