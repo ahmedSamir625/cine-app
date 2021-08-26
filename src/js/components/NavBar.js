@@ -7,7 +7,7 @@ export const NavBar = () => {
     navDiv.classList.add('navbar' ,'navbar-expand-lg', 'navbar-dark' ,'navbar-bg')
   
     navDiv.innerHTML = `   
-    <div class="container-fluid ms-5 me-5">
+    <div class="container-fluid ms-0 me-0 ms-md-5 me-md-5">
     <a class="navbar-brand" href="#">
       <img
         class="logo-img img-fluid"

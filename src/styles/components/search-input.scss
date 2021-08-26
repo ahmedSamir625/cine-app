@@ -8,6 +8,8 @@
     background-color: $search-input-bg;
     height: 40px;
     border-radius: 100px;
+    width: 100%;
+    max-width: 400px;
 }
 
 .search-input {
@@ -16,7 +18,8 @@
     border-style: none;
     outline: none;
     height: 100%;
-    width: 350px;
+    width: 100%;
+    // max-width: 350px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
