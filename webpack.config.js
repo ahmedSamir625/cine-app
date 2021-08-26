@@ -3,6 +3,8 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const MiniCssExtractLoader = require("mini-css-extract-plugin");
+const {InjectManifest} = require('workbox-webpack-plugin');
+
 
 module.exports = {
   mode: "development",
@@ -15,10 +17,17 @@ module.exports = {
 
   plugins: [
     new MiniCssExtractLoader(),
+
     new HtmlWebpackPlugin({
       template: "src/index.html",
       inject: "head" || false,
     }),
+
+    new InjectManifest({
+      swSrc: './src/src-sw.js',
+      swDest:'sw.js',
+      maximumFileSizeToCacheInBytes:10 * 1024 * 1024
+    })
   ],
 
   module: {
